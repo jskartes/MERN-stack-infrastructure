@@ -1,0 +1,151 @@
+/* CSS Custom Properties */
+:root {
+  --orange: #F67F00;
+  --tan-1: #FBF9F6;
+  --tan-2: #E7E2DD;
+  --tan-3: #E2D9D1;
+  --tan-4: #D3C1AE;
+  --text-dark: #615954;
+  --text-light: #968c84;
+  --white: #FFFFFF;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--tan-4);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',sans-serif;
+  height: 100vh;
+  padding: 2vmin;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
+}
+
+#root {
+  height: 100%;
+}
+
+.align-ctr {
+  text-align: center;
+}
+
+.align-rt {
+  text-align: right;
+}
+
+.smaller {
+  font-size: smaller;
+}
+
+.flex-ctr-ctr {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-j-end {
+  justify-content: flex-end;
+}
+
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.section-heading {
+  align-items: center;
+  background-color: var(--tan-1);
+  border: .1vmin solid var(--tan-3);
+  border-radius: 1vmin;
+  color: var(--text-dark);
+  display: flex;
+  font-size: 2vmin;
+  justify-content: space-around;
+  padding: .6vmin;
+  text-align: center;
+}
+
+.form-container {
+  padding: 3vmin;
+  background-color: var(--tan-1);
+  border: .1vmin solid var(--tan-3);
+  border-radius: 1vmin;
+}
+
+p.error-message {
+  color: var(--orange);
+  text-align: center;
+}
+
+form {
+  color: var(--text-light);
+  display: grid;
+  gap: 1.25vmin;
+  grid-template-columns: 1fr 3fr;
+}
+
+label {
+  align-items: center;
+  display: flex;
+  font-size: 2vmin;
+}
+
+input {
+  background-image: none !important; /* prevent lastpass */
+  border: .1vmin solid var(--tan-3);
+  border-radius: .5vmin;
+  color: var(--text-dark);
+  font-size: 2vmin;
+  outline: none;
+  padding: 1vmin;
+}
+
+input:focus {
+  border-color: var(--orange);
+}
+
+button, a.button {
+  background-color: var(--orange);
+  border: .1vmin solid var(--tan-2);
+  border-radius: .5vmin;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 2vmin;
+  font-weight: bold;
+  margin: 1vmin;
+  outline: none;
+  padding: 1vmin;
+  text-align: center;
+  text-decoration: none;
+}
+
+button.btn-sm {
+  font-size: 1.5vmin;
+  padding: .6vmin .8vmin;
+}
+
+button.btn-xs {
+  font-size: 1vmin;
+  padding: .4vmin .5vmin;
+}
+
+button:disabled, form:invalid button[type="submit"] {
+  background-color: var(--tan-4);
+  cursor: not-allowed;
+}
+
+button[type="submit"] {
+  grid-column: span 2;
+  margin: 1vmin 0 0;
+}
